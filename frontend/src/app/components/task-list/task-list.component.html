@@ -1,0 +1,52 @@
+
+<!-- <div><button class="logout-btn" (click)="logout()">Logout</button>
+</div> -->
+<div class="task-container">
+    <div class="controls">
+      <div class="filters">
+        <select [(ngModel)]="statusFilter" (change)="loadTasks()">
+          <option value="">All</option>
+          <option value="completed">Completed</option>
+          <option value="pending">Pending</option>
+        </select>
+        <select [(ngModel)]="sortBy" (change)="loadTasks()">
+          <option value="-created_date">Newest First</option>
+          <option value="created_date">Oldest First</option>
+        </select>
+      </div>
+      <button (click)="showAddTaskForm = true">Add Task</button>
+    </div>
+
+    <div *ngIf="showAddTaskForm" class="task-form">
+      <h3>{{ editingTask ? 'Edit Task' : 'Add Task' }}</h3>
+      <input [(ngModel)]="newTask.title" placeholder="Title">
+      <textarea [(ngModel)]="newTask.description" placeholder="Description"></textarea>
+      <button (click)="saveTask()">{{ editingTask ? 'Update' : 'Add' }}</button>
+      <button (click)="cancelEdit()">Cancel</button>
+    </div>
+
+    <div class="task-list">
+      <div *ngFor="let task of tasks" class="task-item">
+        <div class="task-header">
+          <h3>{{ task.title }}</h3>
+          <div class="task-actions">
+            <button (click)="editTask(task)">Edit</button>
+            <button (click)="deleteTask(task.id)">Delete</button>
+            <input type="checkbox" 
+                   [checked]="task.completed"
+                   (change)="toggleTaskStatus(task)">
+          </div>
+        </div>
+        <p>{{ task.description }}</p>
+        <small>Created: {{ task.created_date | date }}</small>
+      </div>
+    </div>
+
+    <div class="pagination">
+      <button [disabled]="currentPage === 1" 
+              (click)="changePage(currentPage - 1)">Previous</button>
+      <span>Page {{ currentPage }}</span>
+      <button [disabled]="!hasNextPage" 
+              (click)="changePage(currentPage + 1)">Next</button>
+    </div>
+  </div>

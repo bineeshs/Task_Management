@@ -1,0 +1,62 @@
+# Node.js dependencies (Frontend)
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.vscode/
+.idea/
+*.log
+
+# Angular build files
+.angular/
+*.cache
+*.bak
+*.swp
+*.swo
+*.DS_Store
+
+# Python dependencies (Backend)
+__pycache__/
+*.py[cod]
+*.sqlite3
+db.sqlite3
+venv/
+env/
+*.log
+local_settings.py
+secrets.json
+
+# Virtual environment
+/venv/
+/env/
+/.venv/
+
+# Django-related files
+*.pyc
+*.pyo
+*.db
+/media/
+/staticfiles/
+/static/
+*.egg-info
+
+# VSCode and IDE-specific settings
+.vscode/
+.idea/
+*.iml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+*.secret
+config/settings/local.py
+config/settings/production.py
