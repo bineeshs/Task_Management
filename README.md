@@ -65,7 +65,7 @@ Angular app will be available at: `http://localhost:4200/`
 | `/api/tasks/{id}/` | PUT   | Update a task          |
 | `/api/tasks/{id}/` | DELETE | Delete a task         |
 
-# Demo
+#### Demo
   http://13.53.203.69:2255
 
 ## Authentication
