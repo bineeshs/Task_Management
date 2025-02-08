@@ -23,7 +23,7 @@ package-lock.json
 
 # Python dependencies (Backend)
 __pycache__/
-*.py[cod]
+*.pyc[cod]
 *.sqlite3
 db.sqlite3
 venv/
