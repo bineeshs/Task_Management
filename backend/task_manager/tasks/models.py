@@ -9,4 +9,5 @@ class Task(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
+        db_table = 'tasks'
         ordering = ['-created_date']
