@@ -60,3 +60,4 @@ Thumbs.db
 *.secret
 config/settings/local.py
 config/settings/production.py
+*.pyc
