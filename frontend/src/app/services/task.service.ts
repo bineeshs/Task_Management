@@ -7,7 +7,8 @@ import { Task } from '../models/task';
   providedIn: 'root'
 })
 export class TaskService {
-  private apiUrl = 'http://localhost:8000/api/tasks';
+  private apiUrl = 'http://13.53.203.69:5522/api/tasks';
+  // private apiUrl = 'http://192.168.1.34:5522/api/tasks';
 
   constructor(private http: HttpClient) {}
 
@@ -39,6 +40,6 @@ export class TaskService {
   // }
 
   deleteTask(id: number): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/${id}/`); // Add trailing slash
+    return this.http.delete(`${this.apiUrl}/${id}/`); 
   }
 }

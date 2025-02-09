@@ -8,7 +8,8 @@ import { CanActivate, Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:8000/api';
+  private apiUrl = 'http://13.53.203.69:5522/api';
+  // private apiUrl = 'http://192.168.1.34:5522/api';
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient,private router: Router) {
